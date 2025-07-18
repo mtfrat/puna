@@ -1,0 +1,339 @@
+/* Services Component Styles */
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Colores de la marca PUNA */
+:root {
+  --puna-orange: #F7931E;
+  --puna-red: #E53E3E;
+  --puna-coral: #FF6B35;
+  --puna-gray: #718096;
+  --puna-dark: #2D3748;
+  --puna-light: #F7FAFC;
+  --puna-white: #FFFFFF;
+}
+
+/* Sección principal */
+.services-section {
+  padding: 80px 20px;
+  background: #EDF2F7;
+  min-height: 100vh;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header de servicios */
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--puna-red);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--puna-orange), var(--puna-coral));
+  border-radius: 2px;
+}
+
+.services-subtitle {
+  font-size: 1.2rem;
+  color: var(--puna-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid de servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Tarjeta de servicio */
+.service-card {
+  background: var(--puna-white);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(45, 55, 72, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--puna-orange), var(--puna-red), var(--puna-coral));
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(45, 55, 72, 0.15);
+  border-color: var(--puna-coral);
+}
+
+/* Icono del servicio */
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--puna-orange), var(--puna-coral));
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.service-emoji {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.service-card:hover .service-icon {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Contenido del servicio */
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--puna-dark);
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.service-description {
+  color: var(--puna-gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Herramientas */
+.service-tools {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.tools-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--puna-dark);
+  margin-bottom: 10px;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tool-tag {
+  background: linear-gradient(135deg, var(--puna-orange), var(--puna-coral));
+  color: var(--puna-white);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.tool-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(247, 147, 30, 0.3);
+}
+
+/* Precio */
+.service-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, var(--puna-red), var(--puna-coral));
+  border-radius: 12px;
+  color: var(--puna-white);
+}
+
+.price-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.price-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Footer de la tarjeta */
+.service-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.service-footer a{
+  text-decoration: none;
+
+}
+
+.service-footer a button{
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  color: var(--puna-white);
+}
+
+.service-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--puna-red), var(--puna-coral));
+  color: var(--puna-white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.service-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(229, 62, 62, 0.3);
+}
+
+.button-arrow {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.service-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+/* Animaciones */
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(247, 147, 30, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(247, 147, 30, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+  
+  .services-title {
+    font-size: 2.2rem;
+  }
+  
+  .services-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 25px;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-emoji {
+    font-size: 1.8rem;
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
+  
+  .tool-tag {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 10px;
+  }
+  
+  .services-title {
+    font-size: 1.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 20px;
+  }
+  
+  .tools-grid {
+    gap: 6px;
+  }
+  
+  .tool-tag {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+}

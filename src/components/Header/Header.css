@@ -1,0 +1,425 @@
+/* Importar estilos de PUNA */
+:root {
+  --puna-orange: #F7931E;
+  --puna-red: #E53E3E;
+  --puna-coral: #FF6B35;
+  --puna-gray: #718096;
+  --puna-dark: #2D3748;
+  --puna-light: #F7FAFC;
+  --puna-border: #E2E8F0;
+}
+
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Variables para modo oscuro */
+:root.dark-mode,
+.dark-mode {
+  --bg-primary: #1A202C;
+  --bg-secondary: #2D3748;
+  --text-primary: #F7FAFC;
+  --text-secondary: #A0AEC0;
+  --border-color: #4A5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Variables para modo claro */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #F7FAFC;
+  --text-primary: #2D3748;
+  --text-secondary: #718096;
+  --border-color: #E2E8F0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos globales para modo oscuro */
+body.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos del logo PUNA */
+.puna-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.puna-mountains {
+  display: flex;
+  align-items: flex-end;
+  gap: -10px;
+}
+
+.puna-triangle {
+  width: 0;
+  height: 0;
+  display: inline-block;
+}
+
+.puna-triangle-1 {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 35px solid var(--puna-orange);
+}
+
+.puna-triangle-2 {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 45px solid var(--puna-red);
+  margin: 0 -10px;
+}
+
+.puna-triangle-3 {
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 40px solid var(--puna-coral);
+}
+
+.puna-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.puna-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--puna-red);
+  margin: 0;
+  line-height: 1;
+}
+
+.puna-tech {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--puna-gray);
+  margin: 0;
+  line-height: 1;
+}
+
+/* Estilos del NavBar */
+.navbar {
+  background-color: var(--bg-primary);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navbar-item {
+  margin: 0;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: var(--puna-red);
+  background-color: rgba(229, 62, 62, 0.1);
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--puna-red);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 80%;
+}
+
+/* Controles (solo idioma ahora) */
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Selector de idioma desktop */
+.desktop-only {
+  display: flex;
+}
+
+.language-selector {
+  display: flex;
+  gap: 0.2rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: var(--puna-red);
+  color: white;
+}
+
+.lang-btn.active {
+  background-color: var(--puna-red);
+  color: white;
+}
+
+/* Selector de idioma móvil */
+.mobile-language-selector {
+  display: none;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.mobile-language-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.language-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Menu hamburguesa */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.navbar-toggle-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-primary);
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.navbar-toggle-line.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar-toggle-line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle-line.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Animaciones hover del logo */
+.puna-logo:hover .puna-triangle-1 {
+  animation: peak-glow 2s ease-in-out infinite alternate;
+}
+
+.puna-logo:hover .puna-triangle-2 {
+  animation: peak-glow 2s ease-in-out infinite alternate 0.3s;
+}
+
+.puna-logo:hover .puna-triangle-3 {
+  animation: peak-glow 2s ease-in-out infinite alternate 0.6s;
+}
+
+@keyframes peak-glow {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 107, 53, 0.5));
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  /* Ocultar selector de idioma desktop */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Mostrar selector de idioma móvil */
+  .mobile-language-selector {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    flex-direction: column;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    gap: 0;
+    order: 2;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-item {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+  /* Logo responsive */
+  .puna-text {
+    font-size: 1.8rem;
+  }
+  
+  .puna-tech {
+    font-size: 1rem;
+  }
+  
+  .puna-triangle-1 {
+    border-left-width: 12px;
+    border-right-width: 12px;
+    border-bottom-width: 28px;
+  }
+  
+  .puna-triangle-2 {
+    border-left-width: 16px;
+    border-right-width: 16px;
+    border-bottom-width: 36px;
+  }
+  
+  .puna-triangle-3 {
+    border-left-width: 14px;
+    border-right-width: 14px;
+    border-bottom-width: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
+  .puna-logo {
+    gap: 10px;
+  }
+
+  .puna-text {
+    font-size: 1.5rem;
+  }
+  
+  .puna-tech {
+    font-size: 0.9rem;
+  }
+
+  .mobile-language-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .language-selector {
+    padding: 0.1rem;
+  }
+
+  .lang-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}
