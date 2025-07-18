@@ -254,6 +254,7 @@ body.dark-mode {
   flex-direction: column;
   cursor: pointer;
   padding: 0.5rem;
+  margin-left: auto;
 }
 
 .navbar-toggle-line {
@@ -303,6 +304,7 @@ body.dark-mode {
 @media (max-width: 768px) {
   .navbar-container {
     padding: 1rem;
+    position: relative;
   }
 
   .navbar-toggle {
@@ -326,7 +328,7 @@ body.dark-mode {
   }
 
   .navbar-menu {
-    position: fixed;
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
@@ -339,8 +341,8 @@ body.dark-mode {
     visibility: hidden;
     transition: all 0.3s ease;
     gap: 0;
-    order: 2;
     border-top: 1px solid var(--border-color);
+    z-index: 999;
   }
 
   .navbar-menu.active {
