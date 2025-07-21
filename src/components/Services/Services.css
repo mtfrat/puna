@@ -97,6 +97,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%; /* Fija la altura al 100% del contenedor grid */
+  min-height: 550px; /* Altura mínima uniforme para todas las cards */
 }
 
 .service-card::before {
@@ -150,6 +152,10 @@
   color: var(--puna-dark);
   margin-bottom: 15px;
   line-height: 1.3;
+  height: 85px; /* Aumentamos a 85px para mejor alineación */
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .service-description {
@@ -157,12 +163,18 @@
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.95rem;
+  height: 120px; /* Altura fija para todas las descripciones */
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 /* Herramientas */
 .service-tools {
   margin-bottom: 20px;
-  flex-grow: 1;
+  min-height: 100px; /* Altura mínima fija para la sección de herramientas */
+  display: flex;
+  flex-direction: column;
 }
 
 .tools-title {
@@ -195,6 +207,68 @@
   box-shadow: 0 4px 12px rgba(247, 147, 30, 0.3);
 }
 
+/* Indicador de herramientas ocultas */
+.more-tools-indicator {
+  position: relative;
+  display: inline-block;
+}
+
+.more-tools {
+  background: linear-gradient(135deg, var(--puna-gray), #4a5568) !important;
+  cursor: pointer;
+  position: relative;
+}
+
+.more-tools:hover {
+  background: linear-gradient(135deg, var(--puna-red), var(--puna-coral)) !important;
+}
+
+.hidden-tools-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--puna-dark);
+  color: var(--puna-white);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+
+.hidden-tools-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--puna-dark);
+}
+
+.more-tools-indicator:hover .hidden-tools-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden-tool {
+  display: inline-block;
+  margin-right: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hidden-tool:last-child {
+  margin-right: 0;
+}
+
 /* Precio */
 .service-price {
   display: flex;
@@ -219,10 +293,11 @@
 
 /* Footer de la tarjeta */
 .service-footer {
-  margin-top: auto;
+  margin-top: auto; /* Empuja el footer al final de la card */
   padding-top: 20px;
   border-top: 1px solid #E2E8F0;
   transition: border-color 0.3s ease;
+  flex-shrink: 0; /* Evita que el footer se comprima */
 }
 
 .service-footer a{
@@ -313,6 +388,16 @@ body.dark-mode {
   border-top-color: var(--dark-border);
 }
 
+/* Dark mode para tooltip */
+.dark-mode .hidden-tools-tooltip {
+  background: var(--dark-text);
+  color: var(--dark-bg);
+}
+
+.dark-mode .hidden-tools-tooltip::after {
+  border-top-color: var(--dark-text);
+}
+
 /* Animaciones */
 @keyframes pulse-glow {
   0%, 100% {
@@ -346,6 +431,7 @@ body.dark-mode {
   
   .service-card {
     padding: 25px;
+    min-height: 500px; /* Altura ajustada para mobile */
   }
   
   .service-icon {
@@ -359,10 +445,16 @@ body.dark-mode {
   
   .service-title {
     font-size: 1.2rem;
+    height: 70px; /* Ajustado proporcionalmente */
   }
   
   .service-description {
     font-size: 0.9rem;
+    height: 100px; /* Altura ajustada para mobile */
+  }
+  
+  .service-tools {
+    min-height: 80px; /* Altura ajustada para mobile */
   }
   
   .tool-tag {
@@ -386,6 +478,20 @@ body.dark-mode {
   
   .service-card {
     padding: 20px;
+    min-height: 450px; /* Altura ajustada para mobile pequeño */
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+    height: 65px; /* Ajustado proporcionalmente para mobile */
+  }
+  
+  .service-description {
+    height: 90px; /* Altura ajustada para mobile pequeño */
+  }
+  
+  .service-tools {
+    min-height: 70px; /* Altura ajustada para mobile pequeño */
   }
   
   .tools-grid {

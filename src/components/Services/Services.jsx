@@ -37,7 +37,8 @@ const Services = () => {
                     id: 4,
                     title: "Agente Avatar IA - Videos Automatizados con IA",
                     description: "Crea videos automatizados con tu avatar digital realista. Generación de contenido basada en tendencias de mercado para tu estrategia de marketing digital y marca personal.",
-                    tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL", "HEY GEN", "BLOTATO", "PERPLEXITY API"],
+                    tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL"],
+                    hiddenTools: ["HEY GEN", "BLOTATO", "PERPLEXITY API"],
                     icon: "🎭"
                 },
                 {
@@ -87,7 +88,8 @@ const Services = () => {
                     id: 4,
                     title: "Avatar AI Agent - Automated AI-Generated Videos",
                     description: "Creates automated videos with your realistic digital avatar. Content generation based on market trends for your digital marketing strategy and personal branding.",
-                    tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL", "HEY GEN", "BLOTATO", "PERPLEXITY API"],
+                    tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL"],
+                    hiddenTools: ["HEY GEN", "BLOTATO", "PERPLEXITY API"],
                     icon: "🎭"
                 },
                 {
@@ -137,6 +139,16 @@ const Services = () => {
                                         {service.tools.map((tool, index) => (
                                             <span key={index} className="tool-tag">{tool}</span>
                                         ))}
+                                        {service.hiddenTools && (
+                                            <div className="more-tools-indicator">
+                                                <span className="tool-tag more-tools">+{service.hiddenTools.length}</span>
+                                                <div className="hidden-tools-tooltip">
+                                                    {service.hiddenTools.map((tool, index) => (
+                                                        <span key={index} className="hidden-tool">{tool}</span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
