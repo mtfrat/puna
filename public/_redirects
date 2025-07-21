@@ -1,0 +1,18 @@
+# Redirects para SEO - Puna Tech
+# Archivo específico para Vercel deployment
+
+# Redirect para URLs con www (consolidación de dominio)
+https://www.puna-tech.vercel.app/* https://puna-tech.vercel.app/:splat 301!
+
+# Redirects para URLs limpias (futuro)
+/es /es/ 301
+/en /en/ 301
+
+# Redirect para versiones con trailing slash
+/nosotros/ /#nosotros 301
+/servicios/ /#servicios 301  
+/contacto/ /#contacto 301
+
+# Error page redirects
+/404 / 301
+/error / 301

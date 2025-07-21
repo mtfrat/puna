@@ -7,100 +7,100 @@ const Services = () => {
 
     const translations = {
         es: {
-            sectionTitle: "Nuestros Servicios",
-            sectionSubtitle: "Agentes de IA especializados para automatizar y optimizar tu negocio",
+            sectionTitle: "Servicios de Automatización con Inteligencia Artificial",
+            sectionSubtitle: "Agentes de IA personalizados y soluciones de marketing digital para empresas argentinas. Automatización empresarial de vanguardia.",
             toolsTitle: "Herramientas:",
             moreInfoButton: "Más información",
             services: [
                 {
                     id: 1,
-                    title: "AGENTE SECRETARIO PERSONAL",
-                    description: "Tiene la capacidad de gestionar reuniones con cualquier persona que desee contactarte, para mantener el control sobre el tiempo operativo de cada emprendedor.",
+                    title: "Agente Secretario IA - Gestión Automatizada de Reuniones",
+                    description: "Chatbot inteligente con capacidad de gestionar reuniones automatizadamente. Optimiza tu tiempo operativo mediante inteligencia artificial avanzada para emprendedores y empresarios.",
                     tools: ["WA API", "CHAT GPT", "SUPABASE", "GOOGLE CALENDAR"],
                     icon: "📅"
                 },
                 {
                     id: 2,
-                    title: "AGENTE EXPERTO EN YOUTUBE",
-                    description: "Este agente estará constantemente analizando canales de referencia y puede generar guiones totalmente personalizados. Trabajar tu marca personal ya no es excusa.",
+                    title: "Agente Marketing Digital - Creación de Contenido YouTube",
+                    description: "Sistema de IA que analiza tendencias y genera guiones personalizados para YouTube. Automatiza tu estrategia de marketing digital y construye tu marca personal con contenido optimizado.",
                     tools: ["GOOGLE DOCS", "CHAT GPT", "APIFY API", "GMAIL", "RSS"],
                     icon: "🎬"
                 },
                 {
                     id: 3,
-                    title: "AGENTE MANAGER E-COMMERCE",
-                    description: "Agente especializado en controlar e informar del estado actual en tiempo real de cualquier e-commerce alojado en la plataforma Shopify. Se encarga de gestionar tu negocio.",
+                    title: "Agente E-commerce IA - Automatización Shopify",
+                    description: "Agente de inteligencia artificial especializado en gestión de e-commerce. Monitoreo en tiempo real, automatización de procesos y optimización de ventas para tiendas Shopify.",
                     tools: ["WA API", "CHAT GPT", "SUPABASE", "SHOPIFY"],
                     icon: "🛒"
                 },
                 {
                     id: 4,
-                    title: "AGENTE AVATAR MARCA PERSONAL",
-                    description: "Este agente creará videos en automático con tu avatar realista basándose en las tendencias actuales del mercado. Publicar contenido 100% actualizado nunca fue tan fácil.",
+                    title: "Agente Avatar IA - Videos Automatizados con IA",
+                    description: "Crea videos automatizados con tu avatar digital realista. Generación de contenido basada en tendencias de mercado para tu estrategia de marketing digital y marca personal.",
                     tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL", "HEY GEN", "BLOTATO", "PERPLEXITY API"],
                     icon: "🎭"
                 },
                 {
                     id: 5,
-                    title: "AGENTE SEO EXPERTO GENERADOR DE BLOGS",
-                    description: "Agente especialista en posicionamiento web que analiza canales de referencia y tendencias de Google, para crear blogs completamente adaptados. Logrará mas visitas con su conocimiento sobre SEO.",
+                    title: "Agente SEO IA - Generador Automatizado de Blogs",
+                    description: "Especialista en SEO y posicionamiento web con IA. Analiza tendencias Google y crea contenido optimizado. Incrementa tráfico orgánico mediante blogs automatizados con inteligencia artificial.",
                     tools: ["APIFY API", "CHAT GPT", "SERP API", "PERPLEXITY API"],
                     icon: "📝"
                 },
                 {
                     id: 6,
-                    title: "AGENTE APPOINTMENT SETTER",
-                    description: "Agente encargado de brindar información sobre cualquier negocio mediante cualquier red social y con capacidad de agendar llamadas de venta de forma completamente autónoma.",
+                    title: "Agente Ventas IA - Appointment Setter Automatizado",
+                    description: "Bot conversacional para redes sociales con capacidad de agendar citas de venta autónomamente. Automatiza tu proceso de ventas y generación de leads con inteligencia artificial.",
                     tools: ["CHAT GPT", "SUPABASE", "GOOGLE CALENDAR", "MANY CHAT"],
                     icon: "📞"
                 }
             ]
         },
         en: {
-            sectionTitle: "Our Services",
-            sectionSubtitle: "Specialized AI agents to automate and optimize your business",
+            sectionTitle: "AI-Powered Business Automation Services",
+            sectionSubtitle: "Custom AI agents and digital marketing solutions for enterprises. Advanced business automation technology.",
             toolsTitle: "Tools:",
             moreInfoButton: "More information",
             services: [
                 {
                     id: 1,
-                    title: "PERSONAL SECRETARY AGENT",
-                    description: "Has the ability to manage meetings with anyone who wants to contact you, to maintain control over the operational time of each entrepreneur.",
+                    title: "AI Secretary Agent - Automated Meeting Management",
+                    description: "Intelligent chatbot with automated meeting management capabilities. Optimize your operational time through advanced artificial intelligence for entrepreneurs and business owners.",
                     tools: ["WA API", "CHAT GPT", "SUPABASE", "GOOGLE CALENDAR"],
                     icon: "📅"
                 },
                 {
                     id: 2,
-                    title: "YOUTUBE CONTENT EXPERT AGENT",
-                    description: "This agent will constantly analyze reference channels and can generate fully personalized scripts. Working on your personal brand is no longer an excuse.",
+                    title: "Digital Marketing AI - YouTube Content Creation",
+                    description: "AI system that analyzes trends and generates personalized YouTube scripts. Automate your digital marketing strategy and build your personal brand with optimized content.",
                     tools: ["GOOGLE DOCS", "CHAT GPT", "APIFY API", "GMAIL", "RSS"],
                     icon: "🎬"
                 },
                 {
                     id: 3,
-                    title: "E-COMMERCE MANAGER AGENT",
-                    description: "Agent specialized in controlling and reporting the current real-time status of any e-commerce hosted on the Shopify platform. Takes care of managing your business.",
+                    title: "E-commerce AI Agent - Shopify Automation",
+                    description: "Artificial intelligence agent specialized in e-commerce management. Real-time monitoring, process automation and sales optimization for Shopify stores.",
                     tools: ["WA API", "CHAT GPT", "SUPABASE", "SHOPIFY"],
                     icon: "🛒"
                 },
                 {
                     id: 4,
-                    title: "PERSONAL BRAND AVATAR AGENT",
-                    description: "This agent will automatically create videos with your realistic avatar based on current market trends. Publishing 100% updated content has never been so easy.",
+                    title: "Avatar AI Agent - Automated AI-Generated Videos",
+                    description: "Creates automated videos with your realistic digital avatar. Content generation based on market trends for your digital marketing strategy and personal branding.",
                     tools: ["GOOGLE CALENDAR", "CHAT GPT", "SERP API", "GMAIL", "HEY GEN", "BLOTATO", "PERPLEXITY API"],
                     icon: "🎭"
                 },
                 {
                     id: 5,
-                    title: "SEO EXPERT BLOG GENERATOR AGENT",
-                    description: "Agent specialized in web positioning that analyzes reference channels and Google trends, to create fully adapted blogs. Will achieve more visits with their SEO knowledge.",
+                    title: "SEO AI Agent - Automated Blog Generator",
+                    description: "SEO and web positioning specialist with AI. Analyzes Google trends and creates optimized content. Increase organic traffic through AI-automated blogs.",
                     tools: ["APIFY API", "CHAT GPT", "SERP API", "PERPLEXITY API"],
                     icon: "📝"
                 },
                 {
                     id: 6,
-                    title: "APPOINTMENT SETTER AGENT",
-                    description: "Agent in charge of providing information about any business through any social network and with the ability to schedule sales calls completely autonomously.",
+                    title: "Sales AI Agent - Automated Appointment Setter",
+                    description: "Conversational bot for social media with autonomous sales appointment scheduling capabilities. Automate your sales process and lead generation with artificial intelligence.",
                     tools: ["CHAT GPT", "SUPABASE", "GOOGLE CALENDAR", "MANY CHAT"],
                     icon: "📞"
                 }
@@ -113,12 +113,12 @@ const Services = () => {
     return (
         <section className="services-section manrope" id="services">
             <div className="services-container">
-                <div className="services-header">
+                <header className="services-header">
                     <h2 className="services-title">{currentTranslation.sectionTitle}</h2>
                     <p className="services-subtitle">
                         {currentTranslation.sectionSubtitle}
                     </p>
-                </div>
+                </header>
 
                 <div className="services-grid">
                     {currentTranslation.services.map((service) => (

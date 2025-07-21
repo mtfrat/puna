@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a archivos CSS y JS
+Allow: /src/
+Allow: /assets/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+
+# Bloquear archivos innecesarios
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: *.json$
+Disallow: /vite.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+
+# Sitemap
+Sitemap: https://puna-tech.vercel.app/sitemap.xml
+
+# Crawl-delay para ser amigables con los bots
+Crawl-delay: 1

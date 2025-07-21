@@ -9,8 +9,8 @@ const AboutUs = () => {
     // Textos en diferentes idiomas
     const translations = {
         es: {
-            sectionTitle: 'Sobre Nosotros',
-            introText: 'En Puna Tech, somos pioneros en la transformación digital, especializados en el desarrollo de agentes de inteligencia artificial y estrategias de marketing digital innovadoras que impulsan el crecimiento de tu negocio.',
+            sectionTitle: 'Expertos en Agentes de Inteligencia Artificial y Marketing Digital',
+            introText: 'En Puna Tech, somos pioneros en la transformación digital empresarial, especializados en el desarrollo de agentes de inteligencia artificial personalizados y estrategias de marketing digital innovadoras que automatizan procesos e impulsan el crecimiento sostenible de tu negocio.',
             missionTitle: 'Nuestra Misión',
             missionText: 'Democratizar el acceso a la inteligencia artificial y el marketing digital avanzado, proporcionando soluciones personalizadas que optimizan procesos empresariales y maximizan el retorno de inversión de nuestros clientes.',
             visionTitle: 'Nuestra Visión',
@@ -42,8 +42,8 @@ const AboutUs = () => {
             }
         },
         en: {
-            sectionTitle: 'About Us',
-            introText: 'At Puna Tech, we are pioneers in digital transformation, specialized in developing artificial intelligence agents and innovative digital marketing strategies that drive your business growth.',
+            sectionTitle: 'AI Agent Development & Digital Marketing Experts',
+            introText: 'At Puna Tech, we are pioneers in enterprise digital transformation, specialized in developing custom artificial intelligence agents and innovative digital marketing strategies that automate processes and drive sustainable business growth.',
             missionTitle: 'Our Mission',
             missionText: 'Democratize access to artificial intelligence and advanced digital marketing, providing personalized solutions that optimize business processes and maximize our clients\' return on investment.',
             visionTitle: 'Our Vision',
@@ -81,7 +81,7 @@ const AboutUs = () => {
             <div className="container">
                 <div className="about-content">
                     <div className="about-text">
-                        <h2 className="section-title">{translations[currentLanguage].sectionTitle}</h2>
+                        <h1 className="section-title">{translations[currentLanguage].sectionTitle}</h1>
                         <div className="title-underline"></div>
                         
                         <p className="intro-text">

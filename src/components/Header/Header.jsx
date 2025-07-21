@@ -32,45 +32,69 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main navigation">
       <div className="navbar-container">
         {/* Logo */}
         <div className="navbar-logo">
           <div className="puna-logo">
             <div className="puna-mountains">
-              <div className="puna-triangle puna-triangle-1"></div>
-              <div className="puna-triangle puna-triangle-2"></div>
-              <div className="puna-triangle puna-triangle-3"></div>
+              <div className="puna-triangle puna-triangle-1" aria-hidden="true"></div>
+              <div className="puna-triangle puna-triangle-2" aria-hidden="true"></div>
+              <div className="puna-triangle puna-triangle-3" aria-hidden="true"></div>
             </div>
             <div className="puna-text-container manrope">
-              <h1 className="puna-text">PUNA</h1>
+              <h2 className="puna-text">PUNA</h2>
               <p className="puna-tech">TECH</p>
             </div>
           </div>
         </div>
 
         {/* Menu hamburguesa para móvil */}
-        <div className="navbar-toggle" onClick={toggleMenu}>
-          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`}></span>
-          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`}></span>
-          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`}></span>
-        </div>
+        <button 
+          className="navbar-toggle" 
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="navbar-menu"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`} aria-hidden="true"></span>
+          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`} aria-hidden="true"></span>
+          <span className={`navbar-toggle-line ${isMenuOpen ? 'open' : ''}`} aria-hidden="true"></span>
+        </button>
 
         {/* Navigation Links */}
         <div className="navbar-right manrope">
-          <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
-            <li className="navbar-item">
-              <a href="#nosotros" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+          <ul className={`navbar-menu ${isMenuOpen ? 'active' : ''}`} id="navbar-menu" role="menubar">
+            <li className="navbar-item" role="none">
+              <a 
+                href="#nosotros" 
+                className="navbar-link" 
+                onClick={() => setIsMenuOpen(false)}
+                role="menuitem"
+                aria-label={`${translations[currentLanguage].about} section`}
+              >
                 {translations[currentLanguage].about}
               </a>
             </li>
-            <li className="navbar-item">
-              <a href="#servicios" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+            <li className="navbar-item" role="none">
+              <a 
+                href="#servicios" 
+                className="navbar-link" 
+                onClick={() => setIsMenuOpen(false)}
+                role="menuitem"
+                aria-label={`${translations[currentLanguage].services} section`}
+              >
                 {translations[currentLanguage].services}
               </a>
             </li>
-            <li className="navbar-item">
-              <a href="#contacto" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+            <li className="navbar-item" role="none">
+              <a 
+                href="#contacto" 
+                className="navbar-link" 
+                onClick={() => setIsMenuOpen(false)}
+                role="menuitem"
+                aria-label={`${translations[currentLanguage].contact} section`}
+              >
                 {translations[currentLanguage].contact}
               </a>
             </li>
