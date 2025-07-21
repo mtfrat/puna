@@ -1,5 +1,5 @@
 import React from 'react';
-import './services.css';
+import './Services.css';
 import { useLanguage } from '../../LanguageContext.jsx';
 
 const Services = () => {
@@ -111,7 +111,7 @@ const Services = () => {
     const currentTranslation = translations[currentLanguage];
 
     return (
-        <section className="services-section manrope">
+        <section className="services-section manrope" id="services">
             <div className="services-container">
                 <div className="services-header">
                     <h2 className="services-title">{currentTranslation.sectionTitle}</h2>
@@ -142,7 +142,7 @@ const Services = () => {
                             </div>
                             
                             <div className="service-footer">
-                                <a href="#contacto">
+                                <a href="#contact">
                                     <button className="service-button">
                                         <span>{currentTranslation.moreInfoButton}</span>
                                         <svg className="button-arrow" viewBox="0 0 24 24" fill="none">

@@ -1,0 +1,76 @@
+/* App.css - Estilos globales */
+
+/* Variables globales para toda la aplicación */
+:root {
+  --puna-orange: #F7931E;
+  --puna-red: #E53E3E;
+  --puna-coral: #FF6B35;
+  --puna-gray: #718096;
+  --puna-dark: #2D3748;
+  --puna-light: #F7FAFC;
+  --puna-white: #FFFFFF;
+  
+  /* Dark mode colors */
+  --dark-bg: #1a1a1a;
+  --dark-card: #2d2d2d;
+  --dark-text: #e2e8f0;
+  --dark-text-secondary: #a0aec0;
+  --dark-border: #4a5568;
+  --dark-input: #374151;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globales del body */
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Modo claro */
+body {
+  background: #EDF2F7;
+  color: var(--puna-dark);
+}
+
+/* Modo oscuro - Gradiente global */
+body.dark-mode {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #0f0f0f 100%);
+  color: var(--dark-text);
+  min-height: 100vh;
+}
+
+/* Contenedor principal de la app */
+.app {
+  min-height: 100vh;
+}
+
+/* Estilos para elementos de scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Personalización del scrollbar para dark mode */
+body.dark-mode::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark-mode::-webkit-scrollbar-track {
+  background: var(--dark-card);
+}
+
+body.dark-mode::-webkit-scrollbar-thumb {
+  background: var(--puna-orange);
+  border-radius: 4px;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: var(--puna-coral);
+}

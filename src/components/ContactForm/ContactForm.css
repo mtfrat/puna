@@ -239,6 +239,7 @@
   transition: all 0.3s ease;
   font-family: inherit;
   color: var(--puna-dark);
+  box-sizing: border-box;
 }
 
 .form-input:focus,
@@ -402,7 +403,7 @@ body.dark-mode {
 }
 
 .dark-mode .contact-form-section {
-  background: linear-gradient(135deg, var(--dark-bg) 0%, #0f0f0f 100%);
+  background: #0f0f0f;
 }
 
 .dark-mode .contact-form-section::before {

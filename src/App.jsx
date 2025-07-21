@@ -6,7 +6,8 @@ import Footer from './components/Footer/Footer';
 import AboutUs from './components/AboutUs/AboutUs';
 import Services from './components/Services/Services'
 import { LanguageProvider } from './LanguageContext';
-import FloatingDarkMode from './components/FloatingDarkMode/FloatingDarkMode'
+import FloatingDarkMode from './components/FloatingDarkMode/FloatingDarkMode';
+import './App.css';
 
 const App = () => {
   return (

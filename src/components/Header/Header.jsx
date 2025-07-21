@@ -42,7 +42,7 @@ const Header = () => {
               <div className="puna-triangle puna-triangle-2"></div>
               <div className="puna-triangle puna-triangle-3"></div>
             </div>
-            <div className="puna-text-container">
+            <div className="puna-text-container manrope">
               <h1 className="puna-text">PUNA</h1>
               <p className="puna-tech">TECH</p>
             </div>

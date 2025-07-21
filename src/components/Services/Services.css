@@ -16,6 +16,14 @@
   --puna-dark: #2D3748;
   --puna-light: #F7FAFC;
   --puna-white: #FFFFFF;
+  
+  /* Dark mode colors */
+  --dark-bg: #1a1a1a;
+  --dark-card: #2d2d2d;
+  --dark-text: #e2e8f0;
+  --dark-text-secondary: #a0aec0;
+  --dark-border: #4a5568;
+  --dark-input: #374151;
 }
 
 /* Sección principal */
@@ -23,6 +31,7 @@
   padding: 80px 20px;
   background: #EDF2F7;
   min-height: 100vh;
+  transition: background 0.3s ease;
 }
 
 .services-container {
@@ -42,6 +51,10 @@
   color: var(--puna-red);
   margin-bottom: 20px;
   position: relative;
+  background: linear-gradient(135deg, var(--puna-orange) 0%, var(--puna-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .services-title::after {
@@ -209,11 +222,11 @@
   margin-top: auto;
   padding-top: 20px;
   border-top: 1px solid #E2E8F0;
+  transition: border-color 0.3s ease;
 }
 
 .service-footer a{
   text-decoration: none;
-
 }
 
 .service-footer a button{
@@ -251,6 +264,53 @@
 
 .service-button:hover .button-arrow {
   transform: translateX(4px);
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .services-section {
+  background: #0f0f0f;
+}
+
+.dark-mode .services-title {
+  color: var(--dark-text);
+}
+
+.dark-mode .services-subtitle {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .service-card {
+  background: var(--dark-card);
+  border-color: rgba(247, 147, 30, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .service-card:hover {
+  background: #3a3a3a;
+  box-shadow: 0 20px 40px rgba(247, 147, 30, 0.2);
+  border-color: var(--puna-coral);
+}
+
+.dark-mode .service-title {
+  color: var(--dark-text);
+}
+
+.dark-mode .service-description {
+  color: var(--dark-text-secondary);
+}
+
+.dark-mode .tools-title {
+  color: var(--dark-text);
+}
+
+.dark-mode .service-footer {
+  border-top-color: var(--dark-border);
 }
 
 /* Animaciones */
